@@ -41,7 +41,7 @@ typedef NS_CLOSED_ENUM(NSInteger, IVSBroadcastSessionState) {
 
 /// A value representing the `IVSBroadcastSession`s retry state.
 typedef NS_CLOSED_ENUM(NSInteger, IVSBroadcastSessionRetryState) {
-    /// The SDK is not currently attempting to reconnect a failed broadcast
+    /// Default State: The SDK is not currently attempting to reconnect a broadcast
     IVSBroadcastSessionRetryStateNotRetrying,
     /// The SDK is waiting to for the internet connection to be restored before starting to backoff timer to attempt a reconnect.
     IVSBroadcastSessionRetryStateWaitingForInternet,

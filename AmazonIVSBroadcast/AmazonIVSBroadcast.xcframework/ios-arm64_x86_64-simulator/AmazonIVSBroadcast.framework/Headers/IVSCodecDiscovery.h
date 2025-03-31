@@ -60,6 +60,12 @@ IVS_EXPORT
 /// to an `IVSVideoConfiguration` instance. If you only plan on using H.264, it is not necessary
 /// to use this API, the default `IVSVideoConfiguration` initializer will use H.264 by default.
 ///
+/// - Note: This API will perform short encoding sessions to guarantee compatibility with
+/// non-H.264 codecs. To ensure these encodes can complete by the deadline, this API should
+/// be invoked when the device is not using an excessive amount of CPU. Calling this API under
+/// heavy CPU load may result in codecs that would otherwise be compatible being returned as not
+/// compatible.
+///
 /// - Warning: This API is in beta and may change in the future.
 ///
 /// - Parameters:
